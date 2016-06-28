@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head><meta charset="utf-8"> <!-- isso serve pra evitar problemas se quiser usar acento na pag, eh como se fosse uma linguagem mundial mais usada em programacao-->
+    <link href="estilo.css" rel="stylesheet">
+  </head>
+  <body onload="startGame()"> <!-- estou chamando a funcao start game, q ja defini no javamario.js ,eh onde cria o canvas tbm-->
+   <div class="controle"> <!-- aqui fica os botoes q chamam funcoes de movimento no jogomario-->
+     <button onmousedown="accelerate(-0.2)" onmouseup="accelerate(0.1)">Pula</button><br><br>
+  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">Esquerda</button>
+  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">Direita</button><br><br>
+  <button onmousedown="movedown()" onmouseup="clearmove()" ontouchstart="movedown()">Desce</button>
+  </div>
+    <script src="javamario.js"> <!-- Aqui esta a funcao start game esta e tbm as outras funcoes de comportamento d personagem -->
+    </script>
+  </body>
+</html>
