@@ -1,0 +1,129 @@
+/*parte do etilo css*\
+
+/* Caixa de Imagens */
+div.img {
+    border: 1px solid #ccc;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+/* A img */
+div.img img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Descricao da img */
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+/*isso aqui serve pra deixar as imgs lado a lado*/
+* {
+    box-sizing: border-box;
+}
+
+/* add capacidade de resposta */
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+/* o Modal (background) */
+.modal {
+    display: none; /* escondi */
+    position: fixed; /* mantem a posicao no lugar */
+    z-index: 1; /* no topo */
+    padding-top: 100px; /* localizacao da caixa */
+    left: 0;
+    top: 0;
+    width: 100%; /* largura completa */
+    height: 100%; /* altura completa */
+    overflow: auto; /* ativa rolagem, se necessario */
+    background-color: rgb(0,0,0); /* recaida de cor */
+    background-color: rgba(0,0,0,0.9); /* cores preta e opaca */
+}
+
+/* Modal conteudo (imagem) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Modal legenda da imagem */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add animacao*/
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0.1)}
+    to {transform:scale(1)}
+}
+
+/* Botao close */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Colunas */
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+/* Limpar Floats */
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
