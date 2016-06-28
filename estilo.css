@@ -1,0 +1,5 @@
+canvas{
+  padding-bottom: 41px; /*define o tamanho do canvas em relacao a tela*/
+  background-image: url("cenario_mario.jpg"); /*define a img q vai ser o fundo do jogo*/
+  background-size: 100% auto;
+}
