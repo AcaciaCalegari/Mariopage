@@ -1,0 +1,95 @@
+<!-- Acacia Calegari          114153997        TheGameneX -->
+<!-- Esse programa html combina CSS e JavaScript para criar uma galeria de imagem sensível que vai ampliar uma imagem quando clicada.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+     <meta charset="utf-8"/>
+     
+    <title>Mariopage</title>
+    
+    <link rel="stylesheet" type="text/css" href="estilo-descobrindo.css" /> <!--aqui chama o css-->
+  </head>
+
+  <body>
+   <h2 style="text-align:center">Marimagem</h2>
+
+<div class="responsive">
+  <div class="img">
+      <img src="mapamario.jpg" alt="Trolltunga Norway" width="300" height="200">
+    <div class="desc">MarioWorld na versão Mapa Mundi</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <img src="mariomake.jpg" alt="Forest" width="300" height="200">
+    <div class="desc">Maquiagem é prus fracos</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <img src="mariosonic.jpg" alt="Northern Lights" width="300" height="200">
+    <div class="desc">q porréssa? oO</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <img src="mariozuero.png" alt="Mountains" width="300" height="200">
+    <div class="desc">MarioLoko</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// obter o modal
+var modal = document.getElementById('myModal');
+
+// obter o elemento <span> que fecha o modal
+var span = document.getElementsByClassName("close")[0];
+
+//Quando o usuário clica em <span>(x), fecha o modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+//Obter todas as imagens e inserir a imagem clicada dentro do modal
+//Obter o conteúdo de descrição da imagem e inseri-lo dentro da legenda da imagem modal
+var images = document.getElementsByTagName('img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var i;
+for (i = 0; i < images.length; i++) {
+   images[i].onclick = function(){
+       modal.style.display = "block";
+       modalImg.src = this.src;
+       modalImg.alt = this.alt;
+       captionText.innerHTML = this.nextElementSibling.innerHTML;
+   }
+}
+
+</script>
+
+<div style="padding:6px;">
+  <p> <b>Click no Mario Abaixo</b></p>
+</div>
+
+<A HREF="jogomario.html"><i> </i> <IMG SRC="mario3.jpg"> </A> <br>
+
+<a href="mailto:acacia.ufrj@gmail.com"> Me envie um e-mail com sugestões! :D </a>
+  
+
+  
+  </body>
+</html>
